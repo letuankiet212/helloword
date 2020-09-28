@@ -1,0 +1,15 @@
+.vscode/**
+templates/**
+assets/js/**
+!app.js
+!lib.js
+.editorconfig
+.prettierignore
+changelog.md
+git.txt
+LAYOUT.md
+package-lock.json
+package.json
+plopfile.js
+README.md
+prepros.config

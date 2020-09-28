@@ -1,0 +1,21 @@
+.devices319 {
+  display: none;
+  @include between_devices(224px, 319px) {
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    background-color: #384953;
+    color: white;
+  }
+  .icon {
+    background: url(../images/tilt-icon.png);
+    @include background-img(top center, contain);
+    height: 28%;
+  }
+  .alert {
+    font-size: calc(11px + (13 - 11) * ((100vw - 100px) / (319 - 100)));
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,106 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+html {
+  // 10px = 1rem
+  //https://it-news.pw/pxtovw/
+  overflow-x: hidden !important;
+  font-size: 0.5205622071837585vw;
+  @include max_devices(1920) {
+    font-size: 0.5208333333333333vw;
+  }
+}
+
+body {
+  margin: 0 auto;
+  font-family: "tahoma";
+  font-size: calc(11px + (13 - 11) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: 1920px;
+  max-width: 192rem;
+  margin: 0 auto;
+  background: none;
+  overflow-x: hidden !important;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #1e3f20;
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #4a7856;
+    border-radius: 12px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding: 0 1.5rem;
+  @include max_devices(1920) {
+  }
+}
+
+#wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.title-main-content {
+  font-size: 30px;
+  color: #381615;
+  .txt-title {
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 262px;
+      height: 13px;
+      top: 15px;
+    }
+    &:before {
+      left: -280px;
+    }
+    &:after {
+      right: -280px;
+      transform: rotateZ(180deg);
+    }
+  }
+}
+
+.hidden-mobile {
+  @include max_devices(1024) {
+    display: none !important;
+  }
+}
+.visible-pc {
+  @include max_devices(1023) {
+    display: none !important;
+  }
+}
+
+
+// partials
+@import "partials/header";
+@import "partials/footer";
+
+//optional navbar
+@import "optional/slick/slick";
+@import "optional/slick/slick-theme";
+@import "optional/lity/lity";
+@import "optional/fullpage/fullpage";
+// contents
+
+/* PLOP_COMPONENTS_IMPORT */
+@import "components/devices319";
+@import "components/_popup";
+@import "components/_navright";
+@import "typo.scss";
